@@ -1,0 +1,48 @@
+###
+### A complete description of a Prefect Deployment for flow 'etl-web-to-gcs'
+###
+name: etl-web-to-gcs
+description: null
+version: a72b245ce15dd85f32f69cdd6f716f0c
+# The work queue that will handle this deployment's runs
+work_queue_name: default
+work_pool_name: null
+work_pool_queue_name: null
+tags: []
+parameters: {
+  color: 'green',
+  year: 2020,
+  month: 11}
+schedule: null
+infra_overrides: {}
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  working_dir: null
+  block_type_slug: process
+  _block_type_slug: process
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: etl-web-to-gcs
+manifest_path: null
+storage: null
+path: /Users/reneboygarcia/Library/CloudStorage/GoogleDrive-reneboygarcia@gmail.com/My
+  Drive/Personal/Data Science Notebook/Data Engineering/week_2_workflow_orchestration/week2_hw
+entrypoint: etl_web_to_gcs_hw_q4.py:etl_web_to_gcs
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
+timestamp: '2023-02-01T01:14:41.431143+00:00'
+
+# https://towardsdatascience.com/create-robust-data-pipelines-with-prefect-docker-and-github-12b231ca6ed2
+# prefect deployment build ./etl_web_to_gcs_hw_q4.py:etl_web_to_gcs -n "prefect-github-deployment"
+# prefect deployment apply prefect-github-deployment.yaml
