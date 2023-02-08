@@ -5,7 +5,6 @@ import urllib.request
 import pandas as pd
 from prefect import task, flow
 from prefect_gcp.cloud_storage import GcsBucket
-from prefect.filesystems import GCS
 from datetime import timedelta
 from prefect.tasks import task_input_hash
 
